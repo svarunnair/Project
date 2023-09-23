@@ -50,11 +50,15 @@ export default function Signin() {
             flag=true
         }}
     if(flag===true){
-        console.log("aaaaaaaaaaaa")
+        // console.log("aaaaaaaaaaaa")
         navigate("/home")
         let save="abc"
         localStorage.setItem('Token',JSON.stringify(save))
        setShow(true) 
+    }
+    if(flag===false){
+      navigate('/signup')
+      alert("please enter correct data")
     }
 }
 
